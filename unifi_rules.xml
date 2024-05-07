@@ -1,0 +1,39 @@
+<group name="local,syslog,sshd,">
+
+  <rule id="100100" level="3">
+    <decoded_as>unifi_udm_generic</decoded_as>
+    <hostname>UDMPro</hostname>
+    <match>mcad</match>
+    <description>Unifi generic catch-all rule.</description>
+  </rule>
+
+  <rule id="100101" level="5">
+    <decoded_as>unifi_udm_lan_in</decoded_as>
+    <hostname>UDMPro</hostname>
+    <match>Block NEW</match>
+    <description>Unifi route denied new LAN IN flow event.</description>
+  </rule>
+
+  <rule id="100102" level="5">
+    <decoded_as>unifi_udm_lan_out</decoded_as>
+    <hostname>UDMPro</hostname>
+    <match>Block NEW</match>
+    <description>Unifi route denied new LAN OUT flow event.</description>
+  </rule>
+
+  <rule id="100103" level="5">
+    <decoded_as>unifi_udm_wan_in</decoded_as>
+    <hostname>UDMPro</hostname>
+    <match>Block NEW</match>
+    <description>Unifi route denied new WAN IN flow event.</description>
+  </rule>
+
+  <rule id="100104" level="5">
+    <decoded_as>unifi_udm_wan_out</decoded_as>
+    <hostname>UDMPro</hostname>
+    <match>Block NEW</match>
+    <description>Unifi route denied new WAN OUT flow event.</description>
+  </rule>
+
+
+</group>
