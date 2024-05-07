@@ -1,0 +1,29 @@
+<decoder name="unifi_udm_lan_in">
+  <prematch type="pcre2">\[LAN_IN-D-.*\] DESCR=\\\".*\\" IN=.* OUT=.* MAC=.* SRC=.* DST=.* LEN=.* TOS=.* PREC=.* TTL=.* ID=.* DF PROTO=.*</prematch>
+  <regex type="pcre2">\[LAN_IN-D-(.*)\] DESCR=\\\"(.*)\\" IN=(.*) OUT=(.*) MAC=(.*) SRC=(.*) DST=(.*) LEN=(.*) TOS=(.*) PREC=(.*) TTL=(.*) ID=(.*) DF PROTO=(.*) TYPE</regex>
+  <order>lan_in_rule, description, in, out, mac, source, destination, length, tos, prec, ttl, id, protocol</order>
+</decoder>
+
+<decoder name="unifi_udm_lan_out">
+  <prematch type="pcre2">\[LAN_OUT-D-.*\] DESCR=\\\".*\\" IN=.* OUT=.* MAC=.* SRC=.* DST=.* LEN=.* TOS=.* PREC=.* TTL=.* ID=.* DF PROTO=.*</prematch>
+  <regex type="pcre2">\[LAN_OUT-D-(.*)\] DESCR=\\\"(.*)\\" IN=(.*) OUT=(.*) MAC=(.*) SRC=(.*) DST=(.*) LEN=(.*) TOS=(.*) PREC=(.*) TTL=(.*) ID=(.*) DF PROTO=(.*) TYPE</regex>
+  <order>lan_out_rule, description, in, out, mac, source, destination, length, tos, prec, ttl, id, protocol</order>
+</decoder>
+
+<decoder name="unifi_udm_wan_in">
+  <prematch type="pcre2">\[WAN_IN-D-.*\] DESCR=\\\".*\\" IN=.* OUT=.* MAC=.* SRC=.* DST=.* LEN=.* TOS=.* PREC=.* TTL=.* ID=.* DF PROTO=.*</prematch>
+  <regex type="pcre2">\[WAN_IN-D-(.*)\] DESCR=\\\"(.*)\\" IN=(.*) OUT=(.*) MAC=(.*) SRC=(.*) DST=(.*) LEN=(.*) TOS=(.*) PREC=(.*) TTL=(.*) ID=(.*) DF PROTO=(.*) TYPE</regex>
+  <order>wan_in_rule, description, in, out, mac, source, destination, length, tos, prec, ttl, id, protocol</order>
+</decoder>
+
+<decoder name="unifi_udm_wan_out">
+  <prematch type="pcre2">\[WAN_OUT-D-.*\] DESCR=\\\".*\\" IN=.* OUT=.* MAC=.* SRC=.* DST=.* LEN=.* TOS=.* PREC=.* TTL=.* ID=.* DF PROTO=.*</prematch>
+  <regex type="pcre2">\[WAN_OUT-D-(.*)\] DESCR=\\\"(.*)\\" IN=(.*) OUT=(.*) MAC=(.*) SRC=(.*) DST=(.*) LEN=(.*) TOS=(.*) PREC=(.*) TTL=(.*) ID=(.*) DF PROTO=(.*) TYPE</regex>
+  <order>wan_out_rule, description, in, out, mac, source, destination, length, tos, prec, ttl, id, protocol</order>
+</decoder>
+
+<decoder name="unifi_udm_generic">
+  <prematch type="pcre2">UDMPro </prematch>
+  <regex type="pcre2">UDMPro (.*)</regex>
+  <order>udm_generic_data</order>
+</decoder>
